@@ -42,11 +42,14 @@ void World::Update(sf::Time dt)
 
 void World::UpdateBackground()
 {
+	//keep incrementing counter
 	m_counter++;
-	std::cout << m_counter << std::endl;
+	//std::cout << m_counter << std::endl;
 
+	//check if counter is above 1500
 	if(m_counter >= 1500)
 	{
+		//increase world bounds & reset counter
 		std::cout << m_world_bounds.width << std::endl;
 		m_world_bounds.width += 2000.f;
 		m_counter = 0;
